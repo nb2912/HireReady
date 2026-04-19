@@ -1,3 +1,6 @@
 .env
 node_modules/
 dist/
+.txt
+hireready-eb384-firebase-adminsdk-fbsvc-a8164ec310.json
+serviceAccountKey.json
