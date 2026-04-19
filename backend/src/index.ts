@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import { db, auth } from './config/firebase'; // Import db and auth from firebase config
 import authMiddleware from './middleware/authMiddleware'; // Import authMiddleware
@@ -7,7 +8,8 @@ import mainRouter from './routes'; // Import the main router
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(cors());
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
